@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Livraria10 - Livros</title>
+    <title>Livraria10 - Login</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
 </head>
@@ -17,25 +17,37 @@
             <h1>Livraria10</h1>
         </div>
         <div class="itens">
-            <a href="index.html" id="select">Livros</a>
+            <a href="index.html">Livros</a>
             <a href="registrar.html">Registrar</a>
-            <a href="">Login</a>
+            <a href="login.html" id="select">Login</a>
         </div>
     </header>
 
-    <div class="cabecalho">
-        <h1>Livros para alugar:</h1>
-        <div class="pesquisar">
-            <input type="text" name="" id="" placeholder="Pesquisar">
-            <ion-icon name="search-outline"></ion-icon>
+    <form action="/login" class="login">
+        <h1>Login</h1> 
+        <div class="itensLogin">
+            
+            <p>Coloque seu email:</p>
+            <div class="inputs">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            
+            <p>Coloque sua senha:</p>
+            <div class="inputs">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <span>
+                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="eye-off-outline" style="display: none;"></ion-icon>
+                </span>
+                
+            </div>
         </div>
-        
-    </div>
+        <input type="submit" value="Login" id="entrar">
+    </form>
 
-    <div class="livros">
-        <p>Entre para ver os livros.</p>
-    </div>
     
+
    
     <div class="menuLateral" id="menuLateral">
         <div class="menuLateralItens">

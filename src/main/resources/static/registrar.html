@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Livraria10 - Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="#" onclick="AbrirMenu()"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        
+        <div class="logo">
+            <img src="img/Logo.png" alt="">
+            <h1>Livraria10</h1>
+        </div>
+        <div class="itens">
+            <a href="index.html">Livros</a>
+            <a href="registrar.html" id="select">Registrar</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+
+   
+    <div class="menuLateral" id="menuLateral">
+        <div class="menuLateralItens">
+            <div class="titulo">
+                <h1>Menu</h1>
+                <a href="#" onclick="fecharMenu() "><ion-icon name="close-outline"></ion-icon></a>
+            </div>
+            
+            <a href=""><ion-icon name="book-outline"></ion-icon>Livros</a>
+            <a href=""><ion-icon name="person-outline"></ion-icon>Registrar</a>
+            <a href=""><ion-icon name="log-in-outline"></ion-icon>Login</a>
+        </div>
+    </div>
+
+
+    <form action="/registrar" class="registro">
+        <h1>Registrar</h1> 
+        <div class="itensRegistro">
+
+            <p>Coloque sua foto:</p>
+            <input type="file" name="foto" id="foto">
+
+            <p>Coloque seu nome:</p>
+            <div class="inputs">
+                <input type="text" name="nome" id="nome" placeholder="Nome">
+                <ion-icon name="person-outline"></ion-icon>
+            </div>
+            
+            <p>Coloque seu email:</p>
+            <div class="inputs">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            
+            <p>Coloque sua senha:</p>
+            <div class="inputs">
+                <input type="password" name="senha" id="senha" placeholder="Senha">
+                <span>
+                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="eye-off-outline" style="display: none;"></ion-icon>
+                </span>
+                
+            </div>
+        </div>
+        <input type="submit" value="Registrar" id="entrar">
+    </form>
+
+</body>
+<script src="script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</html>
