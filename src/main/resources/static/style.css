@@ -95,6 +95,32 @@ header {
     padding: 20px;
 }
 
+.itens ion-icon {
+    font-size: 40px;
+    color: white;
+    align-items: center;
+    gap: 20px;
+}
+
+.userArea {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.userArea p {
+    font-size: 36px;
+}
+
+img#fotoUser {
+    width: 50px;
+    height: 50px;
+    border: #ffffff solid 2px;
+    align-items: center;
+    margin: auto;
+    border-radius: 100px;
+}
+
 .itens a {
     color: white;
     text-decoration: none;
@@ -163,7 +189,7 @@ header {
     top: 0;
     left: 0;
     width: 20%;
-    height: 100vh;
+    height: 150%;
     background-color: #E07D0B;
     color: white;
     display: none;
@@ -177,9 +203,9 @@ header {
     flex-direction: row;
     align-items: center;
     margin-bottom: 40px;
-    gap: 100px;
+    gap: 200px;
     border-bottom: #ffffff solid 4px;
-    width: 300px;
+    width: 380px;
 }
 
 .titulo ion-icon {
@@ -218,7 +244,7 @@ header {
     padding: 20px;
     border-radius: 20px;
     gap: 10px;
-    box-shadow: black 20px;
+    box-shadow: black 5px 5px 20px;
 }
 
 .registro h1 {
@@ -304,6 +330,7 @@ input#entrar:hover {
     padding: 20px;
     border-radius: 20px;
     gap: 10px;
+    box-shadow: black 5px 5px 20px;
 }
 
 .login h1 {
@@ -357,30 +384,33 @@ input#entrar:hover {
     align-items: center;
 }
 
-input#entrar {
-    width: 550px;
-    height: 50px;
-    background-color: #ffffff;
-    border: solid 4px #E07D0B;
-    border-radius: 40px;
-    transition: 0.5s ease-in;
-    color: #E07D0B;
+span:hover {
+    cursor: pointer;
 }
 
-input#entrar:hover {
+input#entrar {
     width: 550px;
-    height: 50px;
+    height: 60px;
     background-color: #E07D0B;
-    border: solid 2px #E07D0B;
     border-radius: 40px;
-    cursor: pointer;
     transition: 0.5s ease-in;
     color: #ffffff;
 }
 
+input#entrar:hover {
+    width: 550px;
+    height: 60px;
+    background-color: #ffffff;
+    border: solid 2px #E07D0B;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    color: #E07D0B;
+}
+
 footer {
     width: 90%;
-    height: 10%;
+    height: 20%;
     background-color: #E07D0B;
     color: white;
     text-align: center;

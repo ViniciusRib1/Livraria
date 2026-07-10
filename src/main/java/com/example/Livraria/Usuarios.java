@@ -15,4 +15,5 @@ public class Usuarios {
     private String nome;
     private String email;
     private String senha;
+    private String livro;
 }

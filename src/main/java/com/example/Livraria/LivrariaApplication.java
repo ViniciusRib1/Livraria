@@ -11,8 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class LivrariaApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(LivrariaApplication.class, args);
+	}
+
+	
+	@RequestMapping("/")
+	public String inicio() {
+		return "Olá, seja bem-vindo(a) a api da Livraria10!";
 	}
 
 }
