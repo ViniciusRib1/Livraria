@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@RequestMapping
+@RequestMapping()
 @RestController
 public class LivrariaApplication {
 
@@ -15,9 +15,4 @@ public class LivrariaApplication {
 	}
 
 	
-	@RequestMapping("/")
-	public String inicio() {
-		return "Olá, seja bem-vindo(a) a api da Livraria10!";
-	}
-
 }

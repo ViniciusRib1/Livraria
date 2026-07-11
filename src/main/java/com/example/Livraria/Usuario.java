@@ -1,5 +1,7 @@
 package com.example.Livraria;
 
+import org.springframework.web.multipart.MultipartFile;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,8 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 // Criando o objeto usuário
-public class Usuarios {
-    private String foto;
+public class Usuario {
+    private String id;
+    private String fotoString; 
+    private transient MultipartFile foto;
     private String nome;
     private String email;
     private String senha;

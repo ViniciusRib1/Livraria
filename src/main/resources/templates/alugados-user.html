@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Livraria10 - Livros Alugados</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/img/Logo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a href="#" onclick="AbrirMenu()"><ion-icon name="menu-outline"></ion-icon></a>
+        </div>
+        
+        <div class="logo">
+            <img src="/img/Logo.png" alt="">
+            <h1>Livraria10</h1>
+        </div>
+        <div class="itens">
+            <a href="/usuarios/livros" ><ion-icon name="book-outline"></ion-icon> Livros</a>
+            <a href="/usuarios/livros-alugados" id="select"><ion-icon name="cart-outline"></ion-icon> Livros Alugados</a>
+            <div class="userArea" th:if="${session.usuario != null}">
+                <ion-icon name="person-circle-outline"></ion-icon>
+                <p id="nomeUser" th:text="'Olá, ' + ${session.usuario.nome} + '!'"></p>
+                <img th:src="@{'/uploads/' + ${session.usuario.fotoString}}" alt="Foto de perfil" id="fotoUser">
+                <span onclick="abrirOpcoes()">
+                    <ion-icon name="chevron-down-outline" id="setaPerfil"></ion-icon>
+                </span>
+            </div>
+            
+        </div>
+    </header>
+
+    <div class="userOpcoes" style="display: none;" id="userOpcoes">
+        <a href="/usuarios/perfil"><ion-icon name="person-outline"></ion-icon> Perfil</a>
+        <a href="/"><ion-icon name="log-out-outline"></ion-icon> Sair</a>
+    </div>
+
+    <div class="cabecalho">
+        <h1 style="text-align: left; margin: 12px 10px auto; width: 100%;">Seus livros alugados:</h1>
+        
+    </div>
+    
+   
+    <div class="menuLateral" id="menuLateral">
+        <div class="menuLateralItens">
+            <div class="titulo">
+                <h1>Menu</h1>
+                <a href="#" onclick="fecharMenu() "><ion-icon name="close-outline"></ion-icon></a>
+            </div>
+            
+            <a href="/usuarios/livros"><ion-icon name="book-outline"></ion-icon>Livros</a>
+            <a href="/usuarios/livros-alugados"><ion-icon name="cart-outline"></ion-icon> </ion-icon>Livros alugados</a>
+            <a href="/usuarios/perfil"><ion-icon name="person-outline"></ion-icon></ion-icon>Perfil</a>
+            <a href="/"><ion-icon name="log-out-outline"></ion-icon> Sair</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="itemPrincipal">
+            <div class="itens1">
+            <div class="footerLogo">
+                <h1>Livraria10</h1>
+                <img src="/img/Logo.png" alt="">
+            </div>
+            
+        <p>Uma livraria fictícia feita para treinar Spring Boot.</p>
+
+        </div>
+
+        <div class="linha"></div>
+
+        <div class="itens2">
+            <a href="https://www.instagram.com/vinirib01/">Instagram</a>
+            <a href="https://github.com/ViniciusRib1">GitHub</a>
+            <a href="https://www.linkedin.com/in/vinicius-ribeiro20/">LinkedIn</a>
+        </div>
+        </div>
+        
+
+        <div class="autor">
+            <h1>©Vinicius Ribeiro</h1>
+        </div>
+    </footer>
+
+</body>
+<script src="/script.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@8.0.13/dist/ionicons/ionicons.js"></script>
+</html>

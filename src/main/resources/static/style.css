@@ -6,18 +6,22 @@ body {
 }
 header {
     width: 100%;
+    height: 100px;
     background-color: #E07D0B;
     color: white;
     display: flex;
     flex-direction: row;
     text-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 .menu{
     display: flex;
     margin: 0;
     color: white;
     align-items: center;
-    font-size: 42px;
 }
 
 .menu a{
@@ -43,6 +47,7 @@ header {
 }
 .logo h1 {
     font-size: 48px;
+    font-style: italic;
 }
 .itens {
     width: 100%;
@@ -55,34 +60,6 @@ header {
     padding: 20px;
 }
 
-.itens a{
-    gap: 30px;
-    color: white;
-    text-decoration: none;
-    font-size: 36px;
-}
-
-.itens {
-    width: 100%;
-    display: flex;
-    margin: 0 40px;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 80px;
-    padding: 20px;
-}
-
-.itens {
-    width: 100%;
-    display: flex;
-    margin: 0 40px;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 80px;
-    padding: 20px;
-}
 
 .itens {
     width: 100%;
@@ -96,7 +73,7 @@ header {
 }
 
 .itens ion-icon {
-    font-size: 40px;
+    font-size: 25px;
     color: white;
     align-items: center;
     gap: 20px;
@@ -106,25 +83,64 @@ header {
     display: flex;
     flex-direction: row;
     gap: 20px;
+    align-items: center;
 }
 
 .userArea p {
-    font-size: 36px;
+    font-size: 20px;
 }
-
-img#fotoUser {
-    width: 50px;
-    height: 50px;
-    border: #ffffff solid 2px;
+#fotoUser {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
     align-items: center;
     margin: auto;
-    border-radius: 100px;
+}
+
+.userOpcoes {
+    width: 150px;
+    height: 80px;
+    background-color: #E07D0B;
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    margin: 120px 10px 10px auto;
+    justify-content: left;
+    border-radius: 20px;
+    position: fixed;
+    top: 2px;
+    left: 90%;
+    z-index: 1000;
+}
+
+#setaPerfil {
+    transition: transform 0.3s ease; 
+}
+
+.girar-seta {
+    transform: rotate(180deg);
+}
+
+.userOpcoes a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 8px;
+}
+
+.userOpcoes a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 20px;
+    margin: 8px;
 }
 
 .itens a {
     color: white;
     text-decoration: none;
-    font-size: 36px;
+    font-size: 25px;
     position: relative;
     padding-bottom: 5px;
 }
@@ -195,7 +211,7 @@ img#fotoUser {
     display: none;
     flex-direction: row;
     padding: 20px;
-    z-index: 100;
+    z-index: 100000;
 }
 
 .titulo {
@@ -230,13 +246,13 @@ img#fotoUser {
 .livros p {
     margin: 5%;
     color: #E07D0B;
-    font-size: 28px;
+    font-size: 25px;
 }
 
 .registro {
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
+    margin: 10% auto;
     align-items: center;
     justify-content: center;
     border: solid 4px #E07D0B;
@@ -261,7 +277,6 @@ img#fotoUser {
     text-align: start;
     margin: 5%;
 }
-
 
 .inputs {
     border: solid 4px #E07D0B;
@@ -288,6 +303,42 @@ img#fotoUser {
 .inputs input:focus, select:focus {
     outline: none;
     border: none;
+}
+
+.foto-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #E07D0B;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+#preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; 
+}
+
+#cameraIcon {
+    position: absolute;
+    font-size: 30px;
+    color: #E07D0B;
+    z-index: 0; 
+}
+.foto-container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
 }
 
 .inputs ion-icon {
@@ -322,7 +373,7 @@ input#entrar:hover {
 .login {
     display: flex;
     flex-direction: column;
-    margin: 20px auto;
+    margin: 180px auto;
     align-items: center;
     justify-content: center;
     border: solid 4px #E07D0B;
@@ -474,4 +525,80 @@ footer {
     align-items: center;
     padding: 10px;
     font: bolder;
+}
+
+.PerfilCard {
+    width: 1000px;
+    margin: 180px auto;
+    border: 4px solid #E07D0B;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: black 5px 5px 20px;
+
+}
+
+.PerfilCard h1 {
+    color: #E07D0B;
+    border-bottom: 4px solid #E07D0B;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+}
+
+.conteudo {
+    display: flex;
+    gap: 50px;
+}
+
+.col-foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #E07D0B;
+    padding-right: 50px;
+}
+
+.PerfilCard #fotoUser {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #E07D0B;
+    object-fit: cover;
+}
+
+.col-dados {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dado {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #E07D0B;
+}
+
+.dado button, .btn-alterar {
+    background-color: #00008B; 
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.btn-excluir {
+    background-color: red;
+    color: white;
+    width: 150px;
+    margin-top: 50px;
+    align-self: flex-end;
+    border-radius: 50px;
+    cursor: pointer;
 }

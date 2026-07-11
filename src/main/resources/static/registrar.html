@@ -38,12 +38,23 @@
     </div>
 
 
-    <form action="/registrar" class="registro">
+    <form action="/usuarios/registrar" class="registro" method="POST" enctype="multipart/form-data">
         <h1>Registrar</h1> 
         <div class="itensRegistro">
 
             <p>Coloque sua foto:</p>
-            <input type="file" name="foto" id="foto">
+            <div class="foto-container" onclick="document.getElementById('foto').click()">
+            <img id="preview">
+            <ion-icon name="camera-outline" id="cameraIcon"></ion-icon>
+        </div>
+        <input type="file" name="foto" id="foto" style="display: none;" onchange="abrirModal(event)">
+
+            <div id="modalFoto" style="display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);">
+                <div style="background:white; margin:10% auto; padding:20px; width:300px; text-align:center;">
+                    <img id="modalImg" style="width:100%; height:auto;">
+                    <button type="button" onclick="confirmarFoto()">OK</button>                
+                </div>
+            </div>
 
             <p>Coloque seu nome:</p>
             <div class="inputs">
