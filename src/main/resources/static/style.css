@@ -24,14 +24,16 @@ header {
     align-items: center;
 }
 
-.menu a{
+.menu button{
     display: flex;
     margin: 0;
     color: white;
     align-items: center;
     margin: 20px;
     font-size: 48px;
-
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 .logo {
     display: flex;
@@ -49,26 +51,15 @@ header {
     font-size: 48px;
     font-style: italic;
 }
-.itens {
-    width: 100%;
-    display: flex;
-    margin: 0 40px;
-    flex-direction: row;
-    justify-content: end;
-    align-items: center;
-    gap: 80px;
-    padding: 20px;
-}
-
 
 .itens {
     width: 100%;
     display: flex;
-    margin: 0 40px;
+    margin: 0 20px;
     flex-direction: row;
     justify-content: end;
     align-items: center;
-    gap: 80px;
+    gap: 40px;
     padding: 20px;
 }
 
@@ -82,7 +73,7 @@ header {
 .userArea {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -201,17 +192,35 @@ header {
 }
 
 .menuLateral {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 20%;
-    height: 150%;
+    height: 100%;
     background-color: #E07D0B;
     color: white;
-    display: none;
-    flex-direction: row;
     padding: 20px;
     z-index: 100000;
+    
+    transition: transform 0.4s ease;
+    
+    transform: translateX(-100%);
+}
+
+.menuLateral.ativo {
+    transform: translateX(0);
+}
+
+.menuLateral button {
+    display: flex;
+    margin: 0;
+    color: white;
+    align-items: center;
+    margin: 20px;
+    font-size: 48px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .titulo {
@@ -235,7 +244,17 @@ header {
 .menuLateral a {
     color: white;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 35px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+.menuLateral a:hover {
+    color: white;
+    text-decoration: underline;
+    font-size: 35px;
     display: flex;
     flex-direction: row;
     text-align: center;
@@ -602,3 +621,141 @@ footer {
     border-radius: 50px;
     cursor: pointer;
 }
+
+.Dashboard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-color: #E07D0B;
+    color: white;
+    padding: 20px;
+    z-index: 100000;
+    transition: transform 0.4s ease;
+    transform: translateX(-100%);
+}
+
+.menuLateralItensAdm {
+    display: flex;
+}
+
+#notificacoesCampo {
+    display: none; 
+    position: fixed; 
+    top: 140px; 
+    right: 200px; 
+    background-color: #E07D0B;
+    width: 400px; 
+    height: 600px;
+    z-index: 1000; 
+    color: #ffffff;
+    border-radius: 20px;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+
+#notificacoesCampo.ativo {
+    display: flex;
+}
+
+span#camponoti {
+    display: flex;
+    align-items: center;
+}
+
+.livros-container {
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+    gap: 20px;
+}
+
+.livro {
+    display: flex;
+    flex-direction: column;
+    width: 300px; 
+    padding: 20px;
+    border: 2px solid #E07D0B; 
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.livro:hover {
+    transform: translateY(-10px); 
+}
+
+.capa-livro {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.titulo {
+    font-size: 1.4rem;
+    margin: 5px 0;
+    color: #333;
+}
+
+.autor, .editora {
+    margin: 2px 0;
+    color: #E07D0B; 
+    font-weight: 600;
+}
+
+.btn-alugar {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #E07D0B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-alugar:hover {
+    background-color: #c06a09;
+}
+
+.admin-body { display: flex; flex-direction: column; height: 100vh; }
+
+.admin-header { 
+    background-color: #E07D0B; 
+    color: white; 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 15px 20px;
+    align-items: center;
+}
+
+.logo-area { display: flex; align-items: center; gap: 10px; }
+
+.main-container { display: flex; flex: 1; }
+
+.sidebar { 
+    background-color: #E07D0B; 
+    width: 250px; 
+    color: white; 
+    padding: 20px;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.sidebar h2 { margin-bottom: 20px; border-bottom: 2px solid white; padding-bottom: 5px; }
+.sidebar ul { list-style: none; }
+.sidebar ul li { margin: 15px 0; }
+.sidebar ul li a { color: white; text-decoration: none; font-weight: bold; }
+
+.footer-sidebar { text-align: center; font-size: 0.9em; }
+
+.content { padding: 30px; flex: 1; }
+.content h1 { color: #E07D0B; margin-bottom: 10px; }
+.content hr { border: 2px solid #E07D0B; margin-bottom: 20px; }

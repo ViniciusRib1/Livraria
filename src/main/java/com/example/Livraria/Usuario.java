@@ -2,6 +2,11 @@ package com.example.Livraria;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,8 +17,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 // Criando o objeto usuário
+@Entity
+@Table(name = "usuarios")
 public class Usuario {
-    private String id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String fotoString; 
     private transient MultipartFile foto;
     private String nome;

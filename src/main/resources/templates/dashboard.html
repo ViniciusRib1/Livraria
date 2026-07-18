@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Admin - Livraria10</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body class="admin-body">
+
+    <header class="admin-header">
+        <div class="logo-area">
+            <img src="/Logo.png" alt="Logo"> <h1>Livraria 10</h1>
+        </div>
+        <div class="user-area">
+            <h1>Olá, Administrador!</h1>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav>
+                <h2>DashBoard</h2>
+                <ul>
+                    <li><a href="#">Cadastrar Livros</a></li>
+                    <li><a href="#">Nova notificação</a></li>
+                    <li><a href="#">Registro de usuários</a></li>
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </nav>
+            <div class="footer-sidebar">
+                <p>Criado por<br>Vinicius Ribeiro</p>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal -->
+        <main class="content">
+            <h1>Seja bem vindo ao seu dashboard, Administrador!</h1>
+            <hr>
+            <p>Aqui onde você Administra tudo!</p>
+        </main>
+    </div>
+
+</body>
+</html>

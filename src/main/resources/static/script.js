@@ -1,12 +1,14 @@
 function fecharMenu() {
-    menulateral = document.getElementById("menuLateral");
-    menulateral.style.display = "none";
+    const menu = document.getElementById("menuLateral");
+    menu.classList.remove("ativo");
 }
 
 function AbrirMenu() {
-    menulateral = document.getElementById("menuLateral");
-    menulateral.style.display = "flex";
+    const menu = document.getElementById("menuLateral");
+    menu.classList.add("ativo");
 }
+
+
 
 function verSenha() {
     var senhaInput = document.getElementById("senha");
@@ -62,4 +64,25 @@ function abrirOpcoes() {
         opcoes.style.display = "flex";
         setaPerfil.classList.add("girar-seta");
     }
+}
+
+function AbrirNotific() {
+    const notificacao = document.getElementById("notificacoesCampo");
+    const iconnot1 = document.getElementById("iconnot1");
+    const iconnot2 = document.getElementById("iconnot2");
+
+    // Alterna a classe que mostra/esconde o menu
+    notificacao.classList.toggle("ativo");
+
+    // Verifica se agora está visível para ajustar os ícones
+    const estaVisivel = notificacao.classList.contains("ativo");
+
+    if (estaVisivel) {
+        iconnot1.style.display = "none";
+        iconnot2.style.display = "block";
+    } else {
+        iconnot1.style.display = "flex";
+        iconnot2.style.display = "none";
+    }
+
 }
